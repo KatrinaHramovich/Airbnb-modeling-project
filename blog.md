@@ -1,8 +1,7 @@
 What influences Airbnb prices? Does property description tell us about rent price? Light Gradient Boosting vs. Random Forest.
-¬¬¬¬Katrina Hramovich 
+Katrina Hramovich 
 September 24, 2023
 
-¬¬¬ 
 Outline
 1.	Introduction
 2.	What month has the highest rent prices?
@@ -49,5 +48,3 @@ The light gradient boosting model has better prediction score than Random Forest
 Property description can also give information about price.
 Combining two models with a smaller number of features can improve resulting test score.
 
-
-![image](https://github.com/KatrinaHramovich/Airbnb-modeling-project/assets/71725731/ff0a9075-b1e6-4e9e-9982-727485680fc2)
