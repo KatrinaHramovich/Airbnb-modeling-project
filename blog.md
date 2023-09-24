@@ -1,7 +1,8 @@
 # What influences Airbnb prices? Does property description tell us about rent price? Light Gradient Boosting vs. Random Forest.
-Katrina Hramovich 
-September 24, 2023
+Katrina Hramovich
 
+September 24, 2023
+![](https://github.com/KatrinaHramovich/Airbnb-modeling-project/blob/main/The_view.jpg)
 # Outline
 1.	Introduction
 2.	What month has the highest rent prices?
