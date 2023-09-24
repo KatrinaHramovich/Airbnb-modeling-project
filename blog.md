@@ -1,15 +1,16 @@
-What influences Airbnb prices? Does property description tell us about rent price? Light Gradient Boosting vs. Random Forest.
+# What influences Airbnb prices? Does property description tell us about rent price? Light Gradient Boosting vs. Random Forest.
 Katrina Hramovich 
 September 24, 2023
 
-Outline
+# Outline
 1.	Introduction
 2.	What month has the highest rent prices?
 3.	What other features can be important for rent price prediction? Feature selection, Random Forest vs. Light Gradient Boosting.
 4.	What performs better Random Forest or Light Gradient Boosting?
 5.	Can property name and description tell us rental price? Mixed model.
 6. Conclusions
-Introduction
+   
+# Introduction
 Airbnb day prices in Seattle are predicted using feature engineering, random forest and light gradient boosting feature selection and regression. These models aim to help hosts establish appropriate rental prices and to find out what features can influence rental price the most. Text features such as name and description are also considered.
 Here we also compare random forest and light gradient boosting performance. Light Gradient Boosting (LGB) is relatively fast algorithm comparing with other boosting methods. In the final test the sum of two LGB models was applied to reduce overfitting. Final best R-squared score on test is 0.74
 Data are downloaded from kaggle, Seattle Airbnb open data.
@@ -17,7 +18,7 @@ Notebook with code is at github.
 What month has the highest rental prices?
 First, we check the dependence between prices and time on monthly bases. The time series data are in file calendar.csv. In figure below the dependence of mean price over all listings on time over 12 months is shown.
  
-Mean price dependence on time
+# Mean price dependence on time
 In Seattle the highest rental prices are in the summer, especially in June. The price change can be noticeable during the year. The month is added to other features merging simplified table from calendar.csv with data from listings_seattle.csv. However, first data were split into train and test to have different ids in test and train set. On train data score is shown on 5-fold cross validation.
 What other features can be important for rental price prediction? Random forest vs Light Gradient Boosting
 In figures below the feature importance in Random Forest and Light Gradient Boosting is shown after removing weakest features that improved cross validation test result, see notebook for details.
@@ -41,7 +42,8 @@ y_pred1 is value predicted in previous LGB regression model, y_pred2 is predicte
 As the result we got:
 Cross validation R-squared score on text features: 0.28Test score: 0.3Superposition of models on test: 0.74
 In this model text features contribute to the test score.
-Conclusions
+
+# Conclusions
 The Airbnb rent prices noticeably depend on month of the year. The highest prices are in the summer.
 The other features that are influence prices the most are total number of rooms, month, latitude, longitude, accommodates (total number of people to accommodate), room type, reviews per month, host total listening counts, street.
 The light gradient boosting model has better prediction score than Random Forest for our most optimal feature selection. In the Light Gradient Boosting Regression features importance weights are distributed more homogeneously.
