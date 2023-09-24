@@ -14,8 +14,8 @@ September 24, 2023
 # Introduction
 Airbnb day prices in Seattle are predicted using feature engineering, random forest and light gradient boosting feature selection and regression. These models aim to help hosts establish appropriate rental prices and to find out what features can influence rental price the most. Text features such as name and description are also considered.
 Here we also compare random forest and light gradient boosting performance. Light Gradient Boosting (LGB) is relatively fast algorithm comparing with other boosting methods. In the final test the sum of two LGB models was applied to reduce overfitting. Final best R-squared score on test is 0.74
-Data are downloaded from kaggle, Seattle Airbnb open data.
-Notebook with code is at github.
+Data are downloaded from kaggle, [Seattle Airbnb open data](https://www.kaggle.com/datasets/airbnb/seattle).
+Notebook with code is at [github](https://github.com/KatrinaHramovich/Airbnb-modeling-project/tree/main).
 
 # What month has the highest rental prices?
 First, we check the dependence between prices and time on monthly bases. The time series data are in file calendar.csv. In figure below the dependence of mean price over all listings on time over 12 months is shown.
