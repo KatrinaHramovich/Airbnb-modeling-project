@@ -16,16 +16,20 @@ Airbnb day prices in Seattle are predicted using feature engineering, random for
 Here we also compare random forest and light gradient boosting performance. Light Gradient Boosting (LGB) is relatively fast algorithm comparing with other boosting methods. In the final test the sum of two LGB models was applied to reduce overfitting. Final best R-squared score on test is 0.74
 Data are downloaded from kaggle, Seattle Airbnb open data.
 Notebook with code is at github.
-What month has the highest rental prices?
+# What month has the highest rental prices?
 First, we check the dependence between prices and time on monthly bases. The time series data are in file calendar.csv. In figure below the dependence of mean price over all listings on time over 12 months is shown.
  
+![image](https://github.com/KatrinaHramovich/Airbnb-modeling-project/blob/main/Picture1.png)
+
 # Mean price dependence on time
 In Seattle the highest rental prices are in the summer, especially in June. The price change can be noticeable during the year. The month is added to other features merging simplified table from calendar.csv with data from listings_seattle.csv. However, first data were split into train and test to have different ids in test and train set. On train data score is shown on 5-fold cross validation.
 What other features can be important for rental price prediction? Random forest vs Light Gradient Boosting
 In figures below the feature importance in Random Forest and Light Gradient Boosting is shown after removing weakest features that improved cross validation test result, see notebook for details.
 As we know too many features can result to overfitting or some can be even irrelevant. Some highly correlated features are also removed to have best score.
 As we see from figure for Random Forest (RF) feature importance number of total rooms (it includes bathrooms and bedrooms) has the largest score has number of total rooms. The importance score of other features drops fast.
- 
+
+![image](https://github.com/KatrinaHramovich/Airbnb-modeling-project/blob/main/Picture2.png)
+
 For Light Gradient Boosting the most important feature is latitude. However, the importance of other features decreases slowly.
  
 One of most optimal models after features selections is shown for the same number of features in both models. In Light Gradient Boosting all features contribute more homogeneously to the model.
