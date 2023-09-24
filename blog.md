@@ -49,16 +49,29 @@ We see that light gradient boosting gives best scores. From what we see above th
 # Can property name and description text tell us about rent price? Mixed model.
 As text features, name, description, amenities, transit, summary are used after Tfidf vectorizer transformation. In this case the Random Forest was very slow, therefore only LGB regression was applied. First LGB is applied to these text features only. R2 error for this model is about 0.3. To add these features to other that we discussed above makes the result worse because model starts to overfit.
 The way to use extra features is to use superposition of two models with less number of features, the model, described in previous section and the model with text features only. The predicted values are:
+
 y_pred = a1*y_pred1+a2*y_pred2,
+
 y_pred1 is value predicted in previous LGB regression model, y_pred2 is predicted in LGB model with text features only, a1+a2=1. For described models a1=0.8, a2=0.2
+
 As the result we got:
-Cross validation R-squared score on text features: 0.28Test score: 0.3Superposition of models on test: 0.74
+
+Cross validation R-squared score on text features: 0.28 
+
+Test score: 0.3
+
+Superposition of models on test: 0.74
+
 In this model text features contribute to the test score.
 
 # Conclusions
 The Airbnb rent prices noticeably depend on month of the year. The highest prices are in the summer.
+
 The other features that are influence prices the most are total number of rooms, month, latitude, longitude, accommodates (total number of people to accommodate), room type, reviews per month, host total listening counts, street.
+
 The light gradient boosting model has better prediction score than Random Forest for our most optimal feature selection. In the Light Gradient Boosting Regression features importance weights are distributed more homogeneously.
+
 Property description can also give information about price.
+
 Combining two models with a smaller number of features can improve resulting test score.
 
