@@ -24,7 +24,7 @@ First, we check the dependence between prices and time on monthly bases. The tim
 
 # Mean price dependence on time
 
-In Seattle the highest rental prices are in the summer, especially in June. The price change can be noticeable during the year. The month is added to other features merging simplified table from calendar.csv with data from listings_seattle.csv. However, first data were split into train and test to have different ids in test and train set. On train data score is shown on 5-fold cross validation.
+In Seattle the highest rental prices are in the summer, especially in June. The price change can be noticeable during the year. The month is added to other features merging simplified table from calendar.csv with data from listings.csv. However, first data were split into train and test to have different ids in test and train set. On train data score is shown on 5-fold cross validation.
 
 # What other features can be important for rental price prediction? Random forest vs Light Gradient Boosting
 In figures below the feature importance in Random Forest and Light Gradient Boosting is shown after removing weakest features that improved cross validation test result, see notebook for details.
